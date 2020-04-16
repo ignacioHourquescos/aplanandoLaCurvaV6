@@ -1,0 +1,183 @@
+body{
+    height:100%;
+    display: flex;
+    padding-top: 2%;
+    flex-direction: column;
+    padding:0% 10% 0% 10%; 
+    margin:0%;
+    background-color: rgba(226, 226, 218, 0.623);
+}
+
+/*/////////////////////////////////////////////////////////////
+////////////////- H  - E - A - D - E - R //////////////////////
+/////////////////////////////////////////////////////////////*/
+#bloqueHeader{
+    height:10%;
+    background-color: blue;
+    display:flex;
+    padding:0% 2% 0% 2%;
+    justify-content: space-around;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    border-radius: 5px 5px 0% 0%;
+    box-shadow: 13px 17px 15px -14px rgba(0,0,0,0.54);
+}
+
+#botonSwitch{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    font-family: 'ARIAL', sans-serif;
+    color: whitesmoke;
+    font-size: 0.75em;
+}
+
+.countryList{
+  background-color: whitesmoke;
+  font-family: 'arial', sans-serif;
+  color:  black;
+  font-size: 0.75em;
+  border:0px;
+}
+
+.countryList option{
+  background-color: whitesmoke;
+  color: black;
+}
+
+p {
+  font-family: 'aRIAL', sans-serif;
+  color: whitesmoke;
+  font-size: 1em;
+  padding:0% 0% 0% 0%;
+}
+
+/*/////////////////////////////////////////////////////////
+////////////////        GRAFICO        ////////////////////
+/////////////////////////////////////////////////////////*/
+
+#bloqueGrafico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:90vh;
+    background-color: rgb(246, 246, 234);
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 13px 17px 15px -14px rgba(0,0,0,0.54);
+}
+
+      #chart{
+          padding:2% 2% 2% 2%; 
+          margin:0%;
+          width:80%;
+          display:flex;
+      }
+
+
+
+
+
+.kanit{
+    font-family: 'aRIAL', sans-serif;
+    color: whitesmoke;
+    font-size: 0.75em;
+    padding:0%;
+}
+
+
+
+/*////////////////////////////////////////////////////////////
+////////////////     MEDIA QUERIES      //////////////////////
+///////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 600px) {
+    .kanit{
+        font-size:1em;
+    }
+    #chart{
+        padding:0%;
+        width:100%;
+        font-size:45
+    }
+    body{
+        padding:1%;
+    }
+    #bloqueHeader{
+    height:10%;
+    background-color: blue;
+    display:flex;
+    justify-content: space-evenly;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    border-radius: 5px 5px 0% 0%;
+    box-shadow: 13px 17px 15px -14px rgba(0,0,0,0.54);
+}
+    #botonSwitch{
+      display:none;
+    }
+  }
+
+/*-------Boton dwithc----*/
+
+  .switch {
+    position: relative;
+    width: 60px;
+    height: 34px;
+    margin-left:5%;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

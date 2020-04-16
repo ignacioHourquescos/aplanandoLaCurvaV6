@@ -1,0 +1,76 @@
+<!DOCTYPE html><html><head>
+    <title>grafico Coronavirus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+</head>
+
+<body>
+<div id="bloqueHeader">
+    
+    
+    <p>Analizar </p>
+    
+    <div id="bloqueDropDowns">
+        <select id="paiselegido" class="countryList">
+            <option value="ARG" selected>Argentina</option>
+            <option value="BRA">Brazil</option>
+            <option value="URU">Uruguay</option>
+            <option value="PAR">paraguay</option>
+        </select>
+    </div>
+
+    <p> comparado </p>
+
+    <div id="bloqueDropDowns">
+        <select id="paisesParaComparar">
+
+           <option value="Argentina" selected>Seleccionar</option>
+           <option value="Europa">Europa</option>
+           <option value="Vecinos">Paises vecinos</option>
+           <option value="Todos">Todos</option>
+        </select>
+    </div>      
+
+     <div id="botonSwitch"><p>Dia 0</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+             </label> 
+             <p>Cron.</p>
+        </div>
+        
+        
+     <div id="botonSwitch"><p>Lineal</p>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+         </label> 
+         <p>Log.</p>
+    </div>  
+    
+    <div id="botonSwitch"><p>Total</p>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+         </label> 
+         <p>x 1MM</p>
+    </div> 
+
+</div>
+
+
+<div id="bloqueGrafico">
+    <div id="chart"></div>
+</div>
+
+</body>
+<script src="grafico.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</html>
+
+ 

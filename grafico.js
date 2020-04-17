@@ -31,8 +31,7 @@ document.getElementById("paisesParaComparar").addEventListener("change", functio
 //FUNCION QUE OBTIENE LA CURVA DE CONFIRMADOS DEL PAIS
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 function curvaPais (PAIS){
-    var confirmadosPAIS=[];
-    var nombrePais=PAIS;
+    var confirmadosPAIS=[PAIS];
      fetch(`${"https://covidapi.info/api/v1/"}country/${PAIS}`).then((response)=>
      response.json().then(function(data){
          var arrayPAIS =  Object.values(data.result);
@@ -87,7 +86,9 @@ function dibujante(){
     //TRAE TODAS LAS PROMESAS
     Promise.all(arrayDePaises.map(element => curvaPais(element))).then(function(values) {
         for (var i =0; i<values.length;i++){
-            array[i]={name:"Pais",data:values[i]};
+            var nombreCurva = values[i][0];
+            values[i].shift();
+            array[i]={name:nombreCurva,data:values[i]};
         }
     });
     //RENDERIZO GRAFICO

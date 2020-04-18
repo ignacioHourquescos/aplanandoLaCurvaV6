@@ -16,7 +16,7 @@
     <p>Analizar </p>
     
     <div id="bloqueDropDowns">
-        <select id="paiselegido" class="countryList">
+        <select id="paisElegido" class="countryList">
             <option value="ARG" selected>Argentina</option>
             <option value="BRA">Brazil</option>
             <option value="URU">Uruguay</option>
@@ -32,26 +32,26 @@
            <option value="Argentina" selected>Seleccionar</option>
            <option value="Europa">Europa</option>
            <option value="Vecinos">Paises vecinos</option>
-           <option value="Todos">Todos</option>
+           <option value="ninguno">----------</option>
         </select>
     </div>      
 
-     <div id="botonSwitch"><p>Dia 0</p>
+     <div id="botonSwitch"><p>Lineal</p>
             <label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
              </label> 
-             <p>Cron.</p>
+             <p>Logaritimico</p>
         </div>
         
         
-     <div id="botonSwitch"><p>Lineal</p>
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-         </label> 
-         <p>Log.</p>
-    </div>  
+<!--    <div id="botonSwitch"><p>Logaritimico</p>
+    <  <label class="switch">
+    <      <input type="checkbox">
+    <      <span class="slider round"></span>
+    <   </label> 
+    <   <p>Log.</p>
+    <div>  
     
     <div id="botonSwitch"><p>Total</p>
         <label class="switch">
@@ -59,17 +59,18 @@
             <span class="slider round"></span>
          </label> 
          <p>x 1MM</p>
-    </div> 
+    </div> -->
 
 </div>
 
 
 <div id="bloqueGrafico">
-    <div id="chart"></div>
+    <div id="chart"> <h2 style="color:grey">Seleccionar las cruvas a comparar</h2></div>
 </div>
 
 </body>
 <script src="grafico.js"></script>
+<script src="listapaises.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </html>
 

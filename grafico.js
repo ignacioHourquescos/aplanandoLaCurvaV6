@@ -3,8 +3,14 @@ var arrayDePaises=["ARG"];
 var array=[];
 var cantidadDeDias=0;
 var paisesParaComparar;
+var logaritmico;
 
-dibujante();
+var diaActual =new Date();
+var diaCero = new Date("12/25/2019");
+var Difference_In_Time = diaActual.getTime() - diaCero.getTime();
+var numeroDeDias = parseInt(Difference_In_Time / (1000 * 3600 * 24));
+
+
 
 document.getElementById("paisesParaComparar").addEventListener("change", function(){
     paisesParaComparar=$("#paisesParaComparar :selected").val();
@@ -16,17 +22,30 @@ document.getElementById("paisesParaComparar").addEventListener("change", functio
         arrayDePaises=["ARG","ITA","ESP","FRA"];
     }else if(paisesParaComparar=="Vecinos"){
         arrayDePaises=["ARG","BRA","URY","PAR","CHL","BOL",];
-    }else if(paisesParaComparar=="Todos"){
-        arrayDePaises=["AFG","ALB","DZA","ASM","AND","BHR","BLR","BRA","KHM","CAN","ECU","EST","EGY"];
+    }else if(arrayDePaises.length>1){
+        arrayDePaises.pop();
+        arrayDePaises.push(paisesParaComparar);
+    } else{
+        arrayDePaises.push(paisesParaComparar);
     }
-    dibujante();
+    
+    dibujante(logaritmico);
 })
 
+
+
+document.getElementById("botonSwitch").addEventListener("change", function(){
+    document.getElementById("chart").remove();
+    var nuevoDiv = document.createElement("div");
+    nuevoDiv.setAttribute("id","chart");
+    document.getElementById("bloqueGrafico").appendChild(nuevoDiv);
+    console.log("hola");
+    dibujante(logaritmico);
+})
 
 //////////////////////////////////////////////////////
 ///////   F - U - N - C - I - O  - N - E - S   ///////
 //////////////////////////////////////////////////////
-
 
 //FUNCION QUE OBTIENE LA CURVA DE CONFIRMADOS DEL PAIS
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -41,17 +60,18 @@ function curvaPais (PAIS){
          }       
      }) 
  )
+
  return confirmadosPAIS;
 }
 
 
 //RENDERIZA GRAFICO UTILIZANDO APEX CHARTS
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-function renderizarGrafico(elemento){
+function renderizarGrafico(elemento,logaritmico){
     var options =       {
             chart:      {type: 'line',toolbar:{show:false}},
             xaxis:      {categories: ["0"]},
-            yaxis:      {labels:{show:false}},
+            yaxis:      {labels:{style:{fontsize:'0.5 em',}},logarithmic:logaritmico,forceNiceScale: true},
             series:    elemento,
             labels:    ["Argentina", "otro pais","sdf","asdas"],
         responsive:    [{breakpoint: 1025,options :{chart: {height:"100%"}}}],
@@ -66,25 +86,27 @@ function renderizarGrafico(elemento){
 
 //DEVUELVE UN BOLEAN SI SE APRETA O NO LOS SWITCH
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-var lineal=true;
+
 $(document).ready(function(){
     $('input[type="checkbox"]').click(function(){
         if($(this).prop("checked") == true){
             console.log("Checkbox is checked.");
-            lineal=false;
+            logaritmico=true;
+            console.log(logaritmico);
         }
         else if($(this).prop("checked") == false){
             console.log("Checkbox is unchecked.");
-            lineal=true;
+            logaritmico=false;
+            console.log(logaritmico);
         }
     });
 });
 
 //FUNCION DIBUJATNEDE
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-function dibujante(){
+function dibujante(logaritmico){
     //TRAE TODAS LAS PROMESAS
-    Promise.all(arrayDePaises.map(element => curvaPais(element))).then(function(values) {
+    Promise.all(arrayDePaises.map(element => curvaPais(element))).then(function(values) {      
         for (var i =0; i<values.length;i++){
             var nombreCurva = values[i][0];
             values[i].shift();
@@ -92,5 +114,5 @@ function dibujante(){
         }
     });
     //RENDERIZO GRAFICO
-    setTimeout(function() {renderizarGrafico(array)},3000);
+    setTimeout(function() {renderizarGrafico(array,logaritmico)},600);
 }

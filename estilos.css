@@ -28,17 +28,18 @@ body{
     align-items: center;
     justify-content: center;
     align-content: space-around;
-    font-family: 'ARIAL', sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     color: whitesmoke;
-    font-size: 0.75em;
+    
 }
 
 .countryList{
-  background-color: whitesmoke;
-  font-family: 'arial', sans-serif;
-  color:  black;
-  font-size: 0.75em;
+  background-color:whitesmoke;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color:  grey;
+  font-size: 1.5em;
   border:0px;
+  border-bottom: 2px;
 }
 
 .countryList option{
@@ -47,9 +48,9 @@ body{
 }
 
 p {
-  font-family: 'aRIAL', sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   color: whitesmoke;
-  font-size: 1em;
+  font-size: 1.5em;
   padding:0% 0% 0% 0%;
 }
 
@@ -76,12 +77,8 @@ p {
           align-items: center;
       }
 
-
-
-
-
 .kanit{
-    font-family: 'aRIAL', sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     color: whitesmoke;
     font-size: 0.75em;
     padding:0%;

@@ -1,0 +1,25 @@
+{
+  "name": "aplanandolacurvav6",
+  "version": "1.0.0",
+  "description": "comparador de curvas de COVID19",
+  "main": "grafico.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihourquescos/aplanandoLaCurvaV6.git"
+  },
+  "keywords": [
+    "Covid"
+  ],
+  "author": "Ignacio Hourquescos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ihourquescos/aplanandoLaCurvaV6/issues"
+  },
+  "homepage": "https://github.com/ihourquescos/aplanandoLaCurvaV6#readme",
+  "dependencies": {
+    "react-icons-kit": "^1.3.1"
+  }
+}

@@ -1,18 +1,43 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body{
     height:100%;
     display: flex;
     flex-direction: column;
-    padding:1% 10% 1% 10%; 
+  padding:1% 10% 1% 10%; 
     margin:0%;
     background-color: rgba(226, 226, 218, 0.623);
 }
+
+
+#titulo{
+  
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  direction: flex;
+
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: grey;
+  font-size: 2em;
+  padding:0%;
+
+}
+
+
+
 
 /*/////////////////////////////////////////////////////////////
 ////////////////- H  - E - A - D - E - R //////////////////////
 /////////////////////////////////////////////////////////////*/
 #bloqueHeader{
     height:10%;
-    background-color: blue;
     display:flex;
     padding:0% 2% 0% 2%;
     justify-content: space-around;
@@ -30,26 +55,26 @@ body{
     align-content: space-around;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: whitesmoke;
-    
+
 }
 
 .countryList{
-  background-color:whitesmoke;
+  background-color:transparent;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   color:  grey;
   font-size: 1.5em;
-  border:0px;
-  border-bottom: 2px;
+  border:0px;;
+  border-bottom: 1px solid grey;
 }
 
 .countryList option{
   background-color: whitesmoke;
-  color: black;
+  color: grey;
 }
 
 p {
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  color: whitesmoke;
+  color: grey;
   font-size: 1.5em;
   padding:0% 0% 0% 0%;
 }
@@ -62,16 +87,16 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height:90vh;
+    height:80vh;
     background-color: rgb(246, 246, 234);
     border-radius: 0px 0px 5px 5px;
     box-shadow: 13px 17px 15px -14px rgba(0,0,0,0.54);
 }
 
       #chart{
-          padding:2% 2% 2% 2%; 
+          padding:1% 2% 1% 2%; 
           margin:0%;
-          width:80%;
+          width:90%;
           display:flex;
           justify-content: center;
           align-items: center;
@@ -111,7 +136,7 @@ p {
     justify-items: center;
     align-items: center;
     border-radius: 5px 5px 0% 0%;
-    box-shadow: 13px 17px 15px -14px rgba(0,0,0,0.54);
+   /* box-shadow: 13px 17px 15px -14px rgba(0,0,0,0.54);*/
 }
     #botonSwitch{
       display:none;
@@ -162,7 +187,7 @@ p {
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px grey;
   }
   
   input:checked + .slider:before {

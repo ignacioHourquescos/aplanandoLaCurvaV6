@@ -145,3 +145,15 @@ function limpiarGrafico(){
 
 //CREA EL ARRAY DE PAISES SEGUN LAS VARIABLES D ELOS INPUTS
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+//////////////////////////////////////////////////////
+///////   F - U - N - C - I - O  - N - E - S   ///////
+//////////////////////////////////////////////////////
+
+$("#titulo").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#bloqueHeader").offset().top
+    }, 200);
+  })

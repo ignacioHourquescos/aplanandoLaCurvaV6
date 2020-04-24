@@ -6,25 +6,23 @@ body{
     height:100%;
     display: flex;
     flex-direction: column;
-  padding:0% 10% 5% 10%; 
+  padding:0% 0% 0% 0%; 
     margin:0%;
-    background-color: rgba(226, 226, 218, 0.623);
+    background-color: rgba(226, 222, 218, 0.623);
 }
 
 
 #titulo{
-  
+  display:flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-content: center;
+  justify-content: center;
+  align-content: flex-start;
   justify-items: center;
   align-items: center;
   width: 100%;
   height: 100vh;
-  direction: flex;
-
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  color: grey;
+  background-color: rgb(230, 230, 230);
   font-size: 2em;
   padding:0%;
 
@@ -40,10 +38,14 @@ body{
     bottom: 15vh;
   }
 
+  .kanit{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: whitesmoke;
+    font-size: 0.75em;
+    padding:0%;}
+  
 
-/*/////////////////////////////////////////////////////////////
-////////////////- H  - E - A - D - E - R //////////////////////
-/////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////HEADER*/
 #bloqueHeader{
     height:10%;
     display:flex;
@@ -54,92 +56,71 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 5px 5px 0% 0%;
-    box-shadow: 13px 17px 15px -14px rgba(0,0,0,0.54);
-}
-
+    box-shadow: 13px 17px 15px -14px rgba(0,0,0,0.54);}
 #botonSwitch{
     display:flex;
     align-items: center;
     justify-content: center;
     align-content: space-around;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    color: whitesmoke;
-
-}
-
+    color: whitesmoke;}
 .countryList{
   background-color:transparent;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   color:  grey;
   font-size: 1.5em;
   border:0px;;
-  border-bottom: 1px solid grey;
-}
-
+  border-bottom: 1px solid grey;}
 .countryList option{
   background-color: whitesmoke;
-  color: grey;
-}
-
+  color: grey;}
 p {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   color: grey;
   font-size: 1.5em;
-  padding:0% 0% 0% 0%;
-}
-
-/*/////////////////////////////////////////////////////////
-////////////////        GRAFICO        ////////////////////
-/////////////////////////////////////////////////////////*/
-
+  padding:0% 0% 0% 0%;}
+ 
+/*//////////////////////////////////////////////////GRAFICO */
 #bloqueGrafico{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:85vh;
-    padding-bottom:0%;
-    background-color: rgb(246, 246, 234);
-    border-radius: 0px 0px 5px 5px;
-    box-shadow: 13px 17px 15px -14px rgba(0,0,0,0.54);
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:80vh;
+  padding:5vh 0vh 5vh 0vh;}
+#chart{
 
-      #chart{
-          padding:0% 2% 0% 2%; 
-          margin:0%;
-          width:90%;
-          display:flex;
-          justify-content: center;
-          align-items: center;
-      }
+  height: 80vh;
+  width:70%;
+  display:flex;
+  justify-content: center;
+  align-items: center;}
 
-.kanit{
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    color: whitesmoke;
-    font-size: 0.75em;
-    padding:0%;
-}
+/*//////////////////////////////////////////////////FOOTER */
+#footer{
+  display:flex;
+  height:40vh;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: whitesmoke;}
 
-
-
-/*////////////////////////////////////////////////////////////
-////////////////     MEDIA QUERIES      //////////////////////
-///////////////////////////////////////////////////////////*/
-
+/*MEDIA QUERIES */
 @media only screen and (max-width: 600px) {
     .kanit{
-        font-size:1em;
+        font-size:0.5em;
     }
     #chart{
         padding:0%;
         width:100%;
-        font-size:45
+        height:100%;
     }
     body{
         padding:1%;
     }
     #bloqueHeader{
-    height:10%;
-    background-color: blue;
+    height:15%;
+    padding:5%;
     display:flex;
     justify-content: space-evenly;
     align-content: center;
@@ -151,24 +132,24 @@ p {
     #botonSwitch{
       display:none;
     }
-  }
+    #bloqueHeader p{
+      display:none;
+    }
+  
+}
+    
 
-/*-------Boton dwithc----*/
-
-  .switch {
+/*BOTON SWITCH*/
+.switch {
     position: relative;
     width: 60px;
     height: 34px;
-    margin-left:5%;
-  }
-  
-  .switch input { 
+    margin-left:5%;                        }
+.switch input { 
     opacity: 0;
     width: 0;
-    height: 0;
-  }
-  
-  .slider {
+    height: 0;                            }
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -177,10 +158,8 @@ p {
     bottom: 0;
     background-color: #ccc;
     -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
+    transition: .4s;                     }
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -189,40 +168,25 @@ p {
     bottom: 4px;
     background-color: white;
     -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px grey;
-  }
-  
-  input:checked + .slider:before {
+    transition: .4s;                    }
+input:checked + .slider {
+    background-color: #2196F3;        }
+input:focus + .slider {
+    box-shadow: 0 0 1px grey;         }
+input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+    transform: translateX(26px);}
+.slider.round {
+    border-radius: 34px;                }
+.slider.round:before {
+    border-radius: 50%;}
 
 
- 
+/*ARROW//////*/
 @-webkit-keyframes downarrow {
   0% { -webkit-transform: translateY(0); opacity: 0.4 }
-  100% { -webkit-transform: translateY(0.4em); opacity: 0.9 }
-}
-
-
+  100% { -webkit-transform: translateY(1.4em); opacity: 0.9 }}
 .arrow {
   border-color:transparent;
   border-style:solid;
@@ -232,10 +196,7 @@ p {
   opacity:0.4;
   text-indent:-9999px;
   transform-origin: 50% 50%;
-  width:0;
-}
-
+  width:0;}
 .down {
-  -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
-  border-top:1.5em solid #eb5216;
-}
+  -webkit-animation: downarrow 1.6s infinite alternate ease-in;
+  border-top:1.5em solid #f6750b;}

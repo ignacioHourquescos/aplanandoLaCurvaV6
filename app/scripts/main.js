@@ -1,24 +1,7 @@
-<!DOCTYPE html><html><head>
-    <title>grafico Coronavirus</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
-    <link href="estilos.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-
-
-</head>
-
-<body>
+$('body').append
 <div id="titulo">
     <div></br><h1 style="color:blue">COMPARADOR DE CURVAS</h1>          
-        <h4 style="color:rgb(87, 83, 83)">Comparadaor de curvas del COVID19 (fuente:john Hopkins Insitu¿itute)</h4>
-        
-    
-    
-    
+        <h4 style="color:rgb(87, 83, 83)">Comparadaor de curvas del COVID19 (fuente:john Hopkins Insitu¿itute)</h4>    
     
     </div>
     <div class="container">
@@ -65,13 +48,3 @@
     <div id="chart"> <h2 style="color:grey">Seleccionar las cruvas a comparar</h2></div>
 </div>
 
-
-
-</body>
-<script src="listapaises.js"></script>
-<script src="grafico.js"></script>
-<script src="iconosPrueba.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-</html>
-
- 

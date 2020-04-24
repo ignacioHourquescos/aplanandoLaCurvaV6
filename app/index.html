@@ -1,0 +1,80 @@
+<!DOCTYPE html><html><head>
+    <title>grafico Coronavirus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <link href="stylesheets/estilos.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+
+</head>
+
+<body>
+<div id="titulo">
+    <div><h1 style="color:#05299E;text-align: center;">COMPARADOR DE CURVAS</h1>          
+        <h4 style="color:rgb(87, 83, 83)">Comparadaor de curvas del COVID19 (fuente:john Hopkins Insitu¿itute)</h4>
+        
+
+
+    
+    </div>
+    <div class="container">
+        <a href="#bloqueHeader" class="arrow down"></a>
+      </div>
+</div>   
+<div id="bloqueHeader">
+    <p>Comparar </p>
+    
+    <div id="bloqueDropDowns">
+        <select id="paisElegido" class="countryList">
+            <option value="seleccionar" selected>Seleccionar</option>
+            <option value="ARG">Argentina</option>
+            <option value="BRA">Brazil</option>
+            <option value="URU">Uruguay</option>
+            <option value="PAR">paraguay</option>
+        </select>
+    </div>
+
+    <p> con </p>
+
+    <div id="bloqueDropDowns">
+        <select id="paisesParaComparar" class="countryList">
+           <option value="seleccionar" selected>Seleccionar</option>
+           <option value="Europa">Europa</option>
+           <option value="America Del Sur">America Del Sur</option>
+           <option value="ninguno">----------</option>
+        </select>
+    </div>      
+
+     <div id="botonSwitch"><p>Lineal</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+             </label> 
+             <p>Logaritimico</p>
+        </div>
+        
+</div>
+
+
+<div id="bloqueGrafico">
+    <div id="chart"> <p style="color:grey">Seleccione el los paises a comparar</p></div>
+</div>
+
+<div id="footer">
+    <p>gracias! cualquier sugerencia a ignacio Hourqeuscos</p>
+</div>
+
+
+
+
+</body>
+<script src="scripts/listapaises.js"></script>
+<script src="scripts/grafico.js"></script>
+<script src="scrpts/iconosPrueba.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</html>
+
+ 

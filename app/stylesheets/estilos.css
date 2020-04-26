@@ -106,7 +106,7 @@ p {
   color: whitesmoke;}
 
 /*MEDIA QUERIES */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
     .kanit{
         font-size:0.5em;
     }
@@ -122,19 +122,15 @@ p {
     height:15%;
     padding:5%;
     display:flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-content: center;
     justify-items: center;
     align-items: center;
     border-radius: 5px 5px 0% 0%;
     font:0.5em;
-  }
+   /* box-shadow: 13px 17px 15px -14px rgba(0,0,0,0.54);*/}
     #botonSwitch{
       display:none;
-    }
-    #bloqueDropDowns{
-      font:0.5em;
     }
     #bloqueHeader p{
       display:none;

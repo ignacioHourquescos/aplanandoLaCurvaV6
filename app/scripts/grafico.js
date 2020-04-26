@@ -1,6 +1,6 @@
 
 var arrayDePaises=[];
-var arrayDePaisesEU=["ITA","ESP","FRA"];
+var arrayDePaisesEU=["ITA","ESP","FRA","PRT","NLD","DNK","GBR"];
 var arrayDePaisesSA=["ARG","BRA","URY","PAR","CHL","BOL"];
 var array=[];
 var cantidadDeDias=0;

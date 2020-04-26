@@ -127,8 +127,7 @@ p {
     justify-items: center;
     align-items: center;
     border-radius: 5px 5px 0% 0%;
-   /* box-shadow: 13px 17px 15px -14px rgba(0,0,0,0.54);*/
-}
+   /* box-shadow: 13px 17px 15px -14px rgba(0,0,0,0.54);*/}
     #botonSwitch{
       display:none;
     }

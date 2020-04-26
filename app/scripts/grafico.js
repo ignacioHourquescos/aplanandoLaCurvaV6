@@ -129,7 +129,7 @@ function dibujante(logaritmico){
         }
     });
     //RENDERIZO GRAFICO
-    setTimeout(function() {renderizarGrafico(array,logaritmico)},800);
+    setTimeout(function() {renderizarGrafico(array,logaritmico)},1000);
 }
 
 

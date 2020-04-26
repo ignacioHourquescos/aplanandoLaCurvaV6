@@ -134,6 +134,9 @@ p {
     #bloqueHeader p{
       display:none;
     }
+    .countryList{
+      font-size: 1em;
+    }
   
 }
     
